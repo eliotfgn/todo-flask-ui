@@ -15,3 +15,8 @@ export async function getAll(): Promise<Todo[]> {
   let res = await fetch(`${BASE_URL}/todos`);
   return await res.json();
 }
+
+export async function getById(id: number): Promise<Todo> {
+  let res = await fetch(`${BASE_URL}/todos/${id}`);
+  return await res.json();
+}
