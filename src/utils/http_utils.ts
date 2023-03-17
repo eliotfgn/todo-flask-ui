@@ -1,4 +1,4 @@
-const BASE_URL = "127.0.0.1:5000/api/v1"
+const BASE_URL = "http://127.0.0.1:5000/api/v1"
 
 export interface Todo {
   id: number;
@@ -12,7 +12,7 @@ export interface Todo {
 }
 
 export async function getAll(): Promise<Todo[]> {
-  let res = await fetch(`${BASE_URL}/todos`);
+  let res = await fetch(`${BASE_URL}/todos/`);
   return await res.json();
 }
 
